@@ -18,7 +18,9 @@ jobs:
         with:
           go-version-file: './go.mod'
           cache-dependency-path: './go.sum'
-      - run: go mod download
+      - run: | 
+          go mod download 
+          go install github.com/wailsapp/wails/v2/cmd/wails@latest
 
       - uses: oven-sh/setup-bun@v1
         with:
@@ -29,7 +31,7 @@ jobs:
         working-directory: ./frontend
 
       - name: build app
-        run: $GOPATH/bin/wails build
+        run: $(go env GOPATH)/bin/wails build
 
       - name: Release
         uses: softprops/action-gh-release@v1
