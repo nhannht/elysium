@@ -1,7 +1,6 @@
 - WIP: testing the idea of a "lightweight but fast and stable" replacement of Electron.
 - How a simple text editor work
-- Download the binary in release and you can run it on typical linux desktop environment
+- Nothing special, please don't shame on me
 
-
-https://github.com/nhannht/elysium/assets/69144096/94d09c35-b3c3-4fb1-a15a-b9e3a04c1101
+https://github.com/nhannht/elysium/assets/69144096/ba1cce08-1672-44ed-96e8-11ead11f6259
 
