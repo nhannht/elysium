@@ -19,9 +19,9 @@ function RenderView(
 
     return (
         <>
-            <div className={"h-5/6 right-0 w-1/2 bg-neutral-100 absolute overflow-scroll"}>
+            <div className={"h-5/6 right-0 w-1/2 bg-neutral-100  absolute overflow-scroll"}>
                 <div
-                    className={"prose "}
+                    className={"prose   max-w-none p-4 "}
                     dangerouslySetInnerHTML={{__html: html}}/>
             </div>
         </>
@@ -39,9 +39,9 @@ function App() {
 
     return (
         // TODO: add more buttons, auto save function, create new file, export, insert image, recenf file
-        <div className={"h-screen w-screen relative"}>
+        <div className={"h-screen w-screen relative "}>
             <div id={"editorContainer"}
-                 className="w-1/2 mb-4 border border-gray-200 rounded-lg bg-white absolute flex flex-col dark:bg-gray-700 h-5/6 dark:border-gray-600">
+                 className="w-1/2 mb-4 border   border-gray-200  rounded-lg bg-white absolute flex flex-col dark:bg-gray-700 h-5/6 dark:border-gray-600">
                 <ReactCodeMirror
                     id={"codeMirrorEditor"}
                     ref={codeMirrorRef}
@@ -68,8 +68,8 @@ function App() {
             </div>
 
             <button
-                className={"button bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full absolute " +
-                    "bottom-0 left-1/2 -translate-x-1/2"}
+                className={"button  bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full absolute " +
+                    " bottom-10  left-1/2 -translate-x-1/2"}
                 onClick={async () => {
 
                     const fileContent = await ReadFileFromDialog()
