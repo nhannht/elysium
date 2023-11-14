@@ -28,7 +28,7 @@ jobs:
         working-directory: ./frontend
 
       - name: build app
-        run: wails build
+        run: $GOPATH/bin/wails build
 
       - name: Release
         uses: softprops/action-gh-release@v1

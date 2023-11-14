@@ -1,3 +1,0 @@
-- WIP: testing the idea of, a "lightweight but fast and stable" replacement of Electron.
-- How a simple text editor work
-- I am using so many high level libraries, that why I still needed to learn more 
