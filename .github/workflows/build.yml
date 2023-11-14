@@ -1,0 +1,35 @@
+name: Build and publish
+on:
+  push:
+    tags: '*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install frontend dependencies
+        run: bun install
+        working-directory: ./frontend
+
+      - uses: dAppServer/wails-build-action@v2.2
+        with:
+          build-name: elysium-amd64
+          build-platform: linux/amd64
+
+
+
+
+
+
